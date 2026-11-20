@@ -61,7 +61,7 @@
 - **Phase 5**: Configured local `.env` (`GEMINI_API_KEY` + `OFFER_CONTEXT` with placeholder fallback in `app/config.py`), added `docs/TASK_BRIEF.md` to `.gitignore` for public repo confidentiality, and verified final submission copy in `docs/SUBMISSION_DRAFT.md` (`40/50` words and `128/150` words) (`WD-006`).
 
 ## Immediate Next Step
-Push the repo to GitHub (`https://github.com/govindfinally/Gleam.ai`), verify it opens in an incognito browser tab ("anyone with the link can view"), and paste the 3 fields from `docs/SUBMISSION_DRAFT.md` into the submission form.
+Push the repo to GitHub (`https://github.com/govindfinally/ektara`), verify it opens in an incognito browser tab ("anyone with the link can view"), and paste the 3 fields from `docs/SUBMISSION_DRAFT.md` into the submission form.
 
 ## Pending Before Final Submission (Phase 5)
 1. **Local `.env` live smoke test**: Copy `.env.example` -> `.env`, set `GEMINI_API_KEY`, run live tests against sample software company URLs.

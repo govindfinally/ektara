@@ -71,3 +71,8 @@ Chronological human-readable log of AI actions, synchronized with `logs/ai_event
 - **Files**: `.gitignore`, `app/config.py`, `docs/SUBMISSION_DRAFT.md`, `docs/PLAN.md`, `docs/CONTEXT.md`, `AGENTS.md`
 - **Details**: Configured OFFER_CONTEXT in local .env with fallback in app/config.py, excluded confidential docs/TASK_BRIEF.md in .gitignore, and verified final submission fields in docs/SUBMISSION_DRAFT.md (40/50 words and 128/150 words). (Verification: 11/11 unit tests, config check, gitignore check (.env and docs/TASK_BRIEF.md ignored), and wordcount checks (40/50 and 128/150) passed)
 
+### [AI-0013] 2026-11-21T02:49:14+05:30 | Phase 5 | `doc_update` (`done`)
+- **Actor**: antigravity
+- **Summary**: Updated git remote origin and submission docs to https://github.com/govindfinally/ektara
+- **Files**: `docs/SUBMISSION_DRAFT.md`, `docs/CONTEXT.md`
+

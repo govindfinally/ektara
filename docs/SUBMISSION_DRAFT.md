@@ -3,10 +3,10 @@
 All hard word limits have been verified with `python scripts/logger.py wordcount`.
 
 ## 1. Demo or Repo Link
-- **Repository URL**: `https://github.com/govindfinally/Gleam.ai`
+- **Repository URL**: `https://github.com/govindfinally/ektara`
 - **Public Sharing Checklist**:
   - [x] `.env` and `docs/TASK_BRIEF.md` are excluded in `.gitignore` so API keys and confidential test instructions are never pushed publicly
-  - [ ] Push branch/main to GitHub and verify `https://github.com/govindfinally/Gleam.ai` opens in an incognito window ("anyone with the link can view")
+  - [ ] Push branch/main to GitHub and verify `https://github.com/govindfinally/ektara` opens in an incognito window ("anyone with the link can view")
 
 ## 2. How to run it (`40 / 50 words` — Hard Limit: 50)
 Validate with:
