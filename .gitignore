@@ -1,0 +1,22 @@
+# Secrets and environment files
+.env
+.env.*
+!.env.example
+
+# Confidential task brief (keep local on disk; never push to public repo)
+docs/TASK_BRIEF.md
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.pytest_cache/
+
+# Node artifacts
+node_modules/
+
+# OS metadata
+.DS_Store
+Thumbs.db

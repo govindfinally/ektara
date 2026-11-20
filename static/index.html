@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Founder Opener Studio</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <div>
+        <h1>Founder Opener Studio</h1>
+        <p class="subtitle">
+          Draft a grounded 3-line cold email opener from what a company's website actually says.
+        </p>
+      </div>
+      <div id="health-pill" class="pill pill-muted">Checking API status…</div>
+    </header>
+
+    <section class="card">
+      <form id="url-form" class="url-form" novalidate>
+        <label for="url-input" class="sr-only">Company website URL</label>
+        <input
+          id="url-input"
+          name="url"
+          type="text"
+          placeholder="Enter company URL (e.g., linear.app or https://plausible.io)"
+          autocomplete="url"
+          required
+        />
+        <button id="submit-btn" type="submit" class="btn-primary">Draft Opener</button>
+      </form>
+
+      <div class="samples-row">
+        <span class="samples-label">Try sample URL:</span>
+        <button type="button" class="chip" data-url="https://linear.app">linear.app</button>
+        <button type="button" class="chip" data-url="https://plausible.io">plausible.io</button>
+        <button type="button" class="chip" data-url="https://cal.com">cal.com</button>
+      </div>
+    </section>
+
+    <section id="loading-card" class="card loading-card hidden" aria-live="polite">
+      <div class="spinner" aria-hidden="true"></div>
+      <div>
+        <strong>Running pipeline…</strong>
+        <p class="muted">
+          1. Fetching public pages (code) → 2. Drafting opener (Gemini Flash-Lite) → 3. Verifying quotes &amp; line count (code)
+        </p>
+      </div>
+    </section>
+
+    <section id="error-card" class="card error-card hidden" role="alert">
+      <div class="error-header">
+        <span id="error-code" class="pill pill-error">error</span>
+        <strong>Could not generate opener</strong>
+      </div>
+      <p id="error-message" class="error-message"></p>
+    </section>
+
+    <section id="result-section" class="results hidden">
+      <article class="card">
+        <div class="card-header">
+          <div>
+            <h2 id="company-name">Company</h2>
+            <div class="badges-row">
+              <span id="founder-badge" class="pill pill-muted"></span>
+              <span id="validation-badge" class="pill"></span>
+            </div>
+          </div>
+          <button id="copy-btn" type="button" class="btn-secondary">Copy Opener</button>
+        </div>
+
+        <div id="warnings-box" class="warnings-box hidden"></div>
+
+        <ol id="opener-lines" class="opener-lines"></ol>
+
+        <div id="signals-row" class="signals-row"></div>
+      </article>
+
+      <article class="card">
+        <h3>Verifiable Website Evidence</h3>
+        <p class="muted small">
+          Every factual claim checked deterministically against the scraped HTML.
+        </p>
+        <ul id="evidence-list" class="evidence-list"></ul>
+      </article>
+
+      <article class="card">
+        <h3>Code vs. Model Execution Trace</h3>
+        <div id="trace-grid" class="trace-grid"></div>
+        <div class="pages-block">
+          <span class="trace-label">Pages Fetched:</span>
+          <ul id="pages-list" class="pages-list"></ul>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

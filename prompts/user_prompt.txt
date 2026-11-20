@@ -1,0 +1,22 @@
+SENDER OFFER CONTEXT:
+{offer_context}
+
+TARGET WEBSITE:
+{target_url}
+
+PAGES FETCHED ({page_count}):
+{page_urls}
+
+STRUCTURED METADATA (TITLE / META / JSON-LD):
+{structured_metadata}
+
+SCRAPED WEBSITE TEXT (GROUND TRUTH — DO NOT USE EXTERNAL KNOWLEDGE):
+{scraped_content}
+
+TASK:
+Draft the 3-line cold email opener strictly grounded in the text above and return valid JSON matching the configured schema:
+- company_name: string
+- founder_name: string or null (ONLY if explicitly present above)
+- opener_lines: array of EXACTLY 3 strings
+- evidence: array of {claim, quote, source_url} where quote is copied verbatim from above
+- signals: array of 2-4 concise factual tags observed on the site
